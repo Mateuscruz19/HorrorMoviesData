@@ -12,7 +12,7 @@ O projeto trabalha com filmes de terror do The Movie Database (TMDB). O RA1 prep
 | Arquivo | Etapa | Descrição |
 |---|---|---|
 | `horror_movies.csv` | RA1 | Dados brutos: 32.540 filmes × 21 atributos |
-| `HorrorMovieAnalysis.ipynb` | RA1 | Ingestão, diagnóstico de qualidade (Q1 a Q8), limpeza (L1 a L11), testes e exportação |
+| `HorrorMovieAnalysis.ipynb` | RA1 | Ingestão, diagnóstico de qualidade (Q1 a Q8), limpeza (L1 a L11), testes, exportação e respostas às perguntas P1 a P6 |
 | `horror_movies_limpo.csv` | RA1 | Base preparada: 32.404 filmes × 25 atributos (saída do RA1 e entrada do RA2) |
 | `HorrorMovieNight.ipynb` | RA2 | Streaming com janela deslizante sobre vendas simuladas de ingressos na noite de Halloween |
 | `requirements.txt` | RA1 e RA2 | Dependências do projeto |
@@ -37,12 +37,14 @@ Para rodar localmente: pip install -r requirements.txt.
 2. Avalia a qualidade em oito verificações (Q1 a Q8): unicidade, ausências, zeros que significam "não informado", tipos, domínios e período, coerência entre campos, categorias e valores extremos.
 3. Aplica a limpeza em onze decisões (L1 a L11) sobre uma cópia, com testes (`assert`) e uma tabela antes × depois.
 4. Exporta `horror_movies_limpo.csv` (32.404 × 25).
+5. Responde às seis perguntas analíticas (P1 a P6) com tabelas, gráficos e uma síntese final, usando a base limpa.
 
 **Como reproduzir:**
 1. Abrir `HorrorMovieAnalysis.ipynb` no Google Colab (ou em Jupyter local).
 2. Executar todas as células em ordem. A célula de ambiente deve imprimir `✓ Ambiente preparado.` e a de ingestão `✓ Dados carregados com sucesso!` com shape 32540 × 21.
 3. As células de teste devem imprimir `Todas as verificações passaram.`
 4. A última etapa grava `horror_movies_limpo.csv` com 32.404 linhas × 25 colunas.
+5. A seção "Respostas às perguntas" mostra as tabelas e gráficos de P1 a P6 e termina com a síntese das respostas.
 
 **Limitações conhecidas:** 87,0% dos filmes sem orçamento e 95,4% sem receita válidos (a análise de retorno fica restrita a 1.010 filmes); 35,5% sem nota; 10 filmes marcados como lançados com data posterior à coleta; `popularity` reflete o momento da coleta (outubro de 2022). O detalhamento está na seção "Limitações e pendências" do documento do RA1.
 
